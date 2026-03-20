@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=M+PLUS+Rounded+1c&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🌿 Floating Stickers -->
+<div class="stickers">
+  <span class="sticker s1">🌿</span>
+  <span class="sticker s2">🍃</span>
+  <span class="sticker s3">🌸</span>
+  <span class="sticker s4">🌼</span>
+  <span class="sticker s5">🌱</span>
+  <span class="sticker s6">🍀</span>
+  <span class="sticker s7">🌿</span>
+  <span class="sticker s8">🌸</span>
+  <span class="sticker s9">⛅</span>
+  <span class="sticker s10">🌈</span>
+  <span class="sticker s11">🌞</span>
+  <span class="sticker s12">❄</span>
+  <span class="sticker s13">🎨</span>
+</div>
+
+<div class="topbar">
+    <div class="nav-left">
+    🌿 Daily Planner
+     </div>
+
+  <div class="nav-right">
+    <span onclick="showSection('todo', this)" class="nav-item active-tab">📝 Todo</span>
+    <span onclick="showSection('calendar', this)" class="nav-item">📅 Calendar</span>
+    <span onclick="showSection('notes', this)" class="nav-item">📒 Notes</span>
+    <span onclick="showSection('timer', this)" class="nav-item">⏱ Timer</span>
+  </div>
+   <div class="flower-field">
+  <span class="flower f1">🌼</span>
+  <span class="flower f2">🌸</span>
+  <span class="flower f3">🌻</span>
+  <span class="flower f4">🌷</span>
+  <span class="flower f5">🌺</span>
+</div>
+</div>
+
+<!-- ✅ TODO SECTION (YOUR ORIGINAL CODE WRAPPED) -->
+<div id="todo" class="section active">
+
+    <h1>Simple Todo List</h1>
+    <p>Welcome to this todo list. Double click to edit the todo</p>
+
+    <div class="progress">
+      <progress id="progress-bar" value="0" max="100"></progress>
+      <span id="animal" class="animal">🐣</span>
+    </div>
+
+    <p id="progress-text">0% completed</p>
+
+    <input type="text" id="todo-input" placeholder="Enter a todo and press Add or Enter">
+    <button id="add-btn">Add</button>
+
+    <ul id="todo-list"></ul>
+
+</div>
+
+<!-- 📅 CALENDAR SECTION -->
+<div id="calendar" class="section">
+  <h5 id="monthYear"></h5>
+
+  <div class="calendar-container">
+
+  <!-- LEFT: CALENDAR -->
+  <div>
+    <h5 id="monthYear"></h5>
+
+    <div class="calendar-header">
+      <button onclick="changeMonth(-1)">⬅</button>
+      <button onclick="changeMonth(1)">➡</button>
+    </div>
+
+    <div class="days">
+      <div>Mon</div><div>Tue</div><div>Wed</div>
+      <div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+    </div>
+
+    <div id="calendarGrid" class="calendar-grid"></div>
+  </div>
+
+  <!-- RIGHT: EVENT PANEL -->
+  <div class="event-panel">
+    <h3>📋 Events</h3>
+    <div id="eventDetails">Click a date</div>
+  </div>
+
+</div>
+
+  <div id="calendarGrid" class="calendar-grid"></div>
+</div>
+
+<!-- 📝 NOTES SECTION -->
+<div id="notes" class="section">
+  <h1>📝 Notes</h1>
+
+  <div class="notes-input-box">
+    <textarea id="note-input" placeholder="Write your note..."></textarea>
+    <button onclick="addNote()">Add Note</button>
+  </div>
+
+  <div id="notes-container" class="notes-grid"></div>
+</div>
+
+<!-- ⏱ TIMER SECTION -->
+  <div id="timer" class="section">
+
+  <h1>⏱ Timer</h1>
+
+  <div class="timer-container">
+    <div class="timer-box">
+      <div id="time">00:00</div>
+    </div>
+
+    <div class="timer-buttons">
+      <button id="startBtn">Start</button>
+      <button id="stopBtn">Stop</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
