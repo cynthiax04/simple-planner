@@ -6,13 +6,18 @@ View: https://daily-planner-six-tawny.vercel.app/
 
 Features
 📝 Todo list with progress tracking
+
 📅 Calendar with event management
+
 📒 Sticky notes
+
 ⏱ Timer
 
 🛠 Tech Stack
 HTML
+
 CSS
+
 JavaScript
 
 🚀 Usage
